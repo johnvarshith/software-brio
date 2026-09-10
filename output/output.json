@@ -1,0 +1,59 @@
+{
+  "generated_at": "2026-09-11T00:14:48.066890",
+  "total_domains": 3,
+  "successful": 3,
+  "failed": 0,
+  "results": [
+    {
+      "domain": "postman.com",
+      "error": null,
+      "data": {
+        "company_overview": "Postman is an AI‑native API platform that enables engineers to develop, test, manage, and distribute APIs and services at enterprise scale.",
+        "target_audience": "Software engineers, API developers, and development teams building and maintaining APIs, especially within enterprise environments.",
+        "contact_emails": [],
+        "key_leadership": [],
+        "data_confidence_score": 0.7
+      },
+      "usage": {
+        "tokens": 538,
+        "cost": 5.38e-05
+      }
+    },
+    {
+      "domain": "supabase.com",
+      "error": null,
+      "data": {
+        "company_overview": "Supabase provides a Postgres‑based development platform offering a full relational database with built‑in auth, edge functions, storage, realtime sync, vector search and instant REST APIs, enabling developers to build and scale modern applications without managing infrastructure.",
+        "target_audience": "Developers and product teams building web, mobile or AI‑driven applications who need a scalable, secure backend platform that integrates database, authentication, serverless functions, storage and realtime capabilities.",
+        "contact_emails": [],
+        "key_leadership": [],
+        "data_confidence_score": 0.7
+      },
+      "usage": {
+        "tokens": 2261,
+        "cost": 0.00022610000000000002
+      }
+    },
+    {
+      "domain": "vapi.ai",
+      "error": null,
+      "data": {
+        "company_overview": "Vapi provides an advanced voice AI platform that enables developers and enterprises to build, deploy, and manage voice agents quickly, with built‑in orchestration, monitoring, and compliance features.",
+        "target_audience": "Developers, product teams, and large enterprises (including Fortune 100 companies) that need scalable, secure voice AI agents for customer support, lead qualification, and other voice‑first use cases.",
+        "contact_emails": [],
+        "key_leadership": [
+          {
+            "name": "Jason Mitura",
+            "role": "VP of Software Development",
+            "linkedin_url": "https://www.linkedin.com/in/jasonmitura"
+          }
+        ],
+        "data_confidence_score": 0.78
+      },
+      "usage": {
+        "tokens": 2261,
+        "cost": 0.00022610000000000002
+      }
+    }
+  ]
+}
