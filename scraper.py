@@ -4,6 +4,7 @@ Fetches homepage + relevant subpages, returns clean markdown text
 """
 import re
 import logging
+from typing import Any
 from urllib.parse import urljoin, urlparse
 from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeout
 from bs4 import BeautifulSoup
@@ -16,13 +17,13 @@ logger = logging.getLogger(__name__)
 SUBPAGE_KEYWORDS = ["about", "team", "company", "contact", "pricing", "careers", "leadership", "press"]
 
 class WebScraper:
-    def __init__(self, headless=True, max_subpages=4):
+    def __init__(self, headless: bool = True, max_subpages: int = 4) -> None:
         self.headless = headless
         self.max_subpages = max_subpages  # Limit subpages to save tokens
         self.browser = None
         self.context = None
 
-    def __enter__(self):
+    def __enter__(self) -> "WebScraper":
         self.pw = sync_playwright().start()
         self.browser = self.pw.chromium.launch(headless=self.headless)
         self.context = self.browser.new_context(
@@ -31,7 +32,7 @@ class WebScraper:
         )
         return self
 
-    def __exit__(self, exc_type, exc_val, exc_tb):
+    def __exit__(self, exc_type: Any, exc_val: Any, exc_tb: Any) -> None:
         if self.browser:
             self.browser.close()
         if self.pw:
@@ -87,7 +88,7 @@ class WebScraper:
 
         return result
 
-    def _discover_subpages(self, page, base_url: str) -> list:
+    def _discover_subpages(self, page: Any, base_url: str) -> list[str]:
         """Find internal links matching relevant keywords."""
         try:
             links = page.eval_on_selector_all("a[href]", "els => els.map(el => el.href)")
@@ -113,7 +114,7 @@ class WebScraper:
         except Exception:
             return []
 
-    def _extract_clean_content(self, page) -> str:
+    def _extract_clean_content(self, page: Any) -> str:
         """
         Extract clean text from page. Strips scripts, styles, nav, footer.
         Returns markdown for token efficiency.
@@ -146,7 +147,7 @@ class WebScraper:
             logger.warning(f"   ⚠️ Content extraction failed: {str(e)}")
             return ""
 
-    def _dismiss_overlays(self, page):
+    def _dismiss_overlays(self, page: Any) -> None:
         """Try to dismiss cookie banners and popups."""
         overlay_selectors = [
             "button:has-text('Accept')",

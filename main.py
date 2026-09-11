@@ -3,6 +3,7 @@ main.py - Orchestrates the full pipeline: Scrape → Extract → Save
 """
 import json
 import logging
+import time
 from datetime import datetime
 from scraper import WebScraper
 from extractor import LLMExtractor
@@ -22,7 +23,7 @@ OUTPUT_FILE = "output/output.json"
 
 # ─── Main Pipeline ───────────────────────────────────────────────────────────
 
-def main():
+def main() -> None:
     logger.info("=" * 60)
     logger.info("AI Lead Enrichment Agent - Starting")
     logger.info("=" * 60)
@@ -34,7 +35,7 @@ def main():
     # Use scraper as context manager (handles browser cleanup)
     with WebScraper(headless=True, max_subpages=4) as scraper:
 
-        for domain in TARGET_DOMAINS:
+        for domain_index, domain in enumerate(TARGET_DOMAINS):
             logger.info(f"\n{'─' * 40}")
             logger.info(f"Processing: {domain}")
             logger.info(f"{'─' * 40}")
@@ -68,6 +69,9 @@ def main():
             except Exception as e:
                 logger.error(f"   ❌ Unexpected error for {domain}: {str(e)}")
                 results.append({"domain": domain, "error": str(e), "data": None})
+            finally:
+                if domain_index < len(TARGET_DOMAINS) - 1:
+                    time.sleep(1)
 
     # ─── Save Results ────────────────────────────────────────────────────────
     output = {

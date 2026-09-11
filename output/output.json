@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-11T00:14:48.066890",
+  "generated_at": "2026-09-11T12:34:16.730935",
   "total_domains": 3,
   "successful": 3,
   "failed": 0,
@@ -8,8 +8,8 @@
       "domain": "postman.com",
       "error": null,
       "data": {
-        "company_overview": "Postman is an AI‑native API platform that enables engineers to develop, test, manage, and distribute APIs and services at enterprise scale.",
-        "target_audience": "Software engineers, API developers, and development teams building and maintaining APIs, especially within enterprise environments.",
+        "company_overview": "Postman is an AI-native API platform that enables developers to develop, test, manage, and distribute APIs and services, offering tools for both individual engineers and enterprise-scale organizations.",
+        "target_audience": "Software engineers, developers, and enterprise teams that design, build, test, and maintain APIs.",
         "contact_emails": [],
         "key_leadership": [],
         "data_confidence_score": 0.7
@@ -23,8 +23,8 @@
       "domain": "supabase.com",
       "error": null,
       "data": {
-        "company_overview": "Supabase provides a Postgres‑based development platform offering a full relational database with built‑in auth, edge functions, storage, realtime sync, vector search and instant REST APIs, enabling developers to build and scale modern applications without managing infrastructure.",
-        "target_audience": "Developers and product teams building web, mobile or AI‑driven applications who need a scalable, secure backend platform that integrates database, authentication, serverless functions, storage and realtime capabilities.",
+        "company_overview": "Supabase provides a Postgres‑based development platform that delivers a full database, authentication, edge functions, storage, realtime sync, vector search, and instant REST APIs as a unified backend.",
+        "target_audience": "Developers and product teams building web, mobile, or AI‑powered applications who need scalable, managed PostgreSQL infrastructure and integrated backend services.",
         "contact_emails": [],
         "key_leadership": [],
         "data_confidence_score": 0.7
@@ -38,8 +38,8 @@
       "domain": "vapi.ai",
       "error": null,
       "data": {
-        "company_overview": "Vapi provides an advanced voice AI platform that enables developers and enterprises to build, deploy, and manage voice agents quickly, with built‑in orchestration, monitoring, and compliance features.",
-        "target_audience": "Developers, product teams, and large enterprises (including Fortune 100 companies) that need scalable, secure voice AI agents for customer support, lead qualification, and other voice‑first use cases.",
+        "company_overview": "Vapi provides a platform for building, deploying, and managing advanced voice AI agents that can handle customer support, lead qualification, and appointment scheduling. The solution offers enterprise‑grade features such as real‑time monitoring, SSO/OAuth, compliance certifications, and scalable infrastructure.",
+        "target_audience": "Enterprises and large organizations that need voice‑based AI agents for customer support, sales, and other high‑volume call interactions.",
         "contact_emails": [],
         "key_leadership": [
           {
@@ -48,7 +48,7 @@
             "linkedin_url": "https://www.linkedin.com/in/jasonmitura"
           }
         ],
-        "data_confidence_score": 0.78
+        "data_confidence_score": 0.7
       },
       "usage": {
         "tokens": 2261,
