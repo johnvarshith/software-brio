@@ -432,13 +432,7 @@ The assignment is configured to process:
 
 ## 👨‍💻 Author
 
-**[Your Full Name]**
-
-AI / ML Engineer | Python Developer
-
-GitHub: [Your GitHub Profile]
-
-LinkedIn: [Your LinkedIn Profile]
+Janjarapu varshithkar
 
 ---
 
